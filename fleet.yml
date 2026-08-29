@@ -1,0 +1,22 @@
+# fleet.yml — the map of everything, at pinned versions.
+# Schema and laws: SHAPER-OS-V1.13/docs/architecture/FLEET.md (Rule 37).
+# Repos and tags only — instances are ledger rows, buckets are derivable.
+base:
+  repo: https://github.com/xavdp-pro/SHAPER-OS-V1.13
+  tag: v1.13.0
+catalogue:
+  repo: https://github.com/xavdp-pro/SHAPER-OS-BRICKS-V1.13
+  tag: v1.13.0
+classes: []
+  # A class registers here at birth (shaper new opens the PR).
+  # - name: univ-<projet>-<classe>
+  #   repo: https://github.com/xavdp-pro/univ-<projet>-<classe>
+  #   tag: v1.0.0
+  #   governedBy: self
+machines:
+  - name: gbs-test
+    kind: lxd
+    reach: operator SSH, IP-allowlisted — credentials never live here
+  - name: gbs-p2
+    kind: proxmox
+    reach: operator SSH, IP-allowlisted — credentials never live here
