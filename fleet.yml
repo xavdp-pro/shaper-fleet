@@ -19,7 +19,9 @@ classes: []
 machines:
   - name: gbs-test
     kind: lxd
+    registry: 127.0.0.1:5000        # the shaper-registry container on this host
     reach: operator SSH, IP-allowlisted — credentials never live here
   - name: gbs-p2
     kind: proxmox
+    registry: 127.0.0.1:5000        # gbs-p2 runs its own registry — one per machine
     reach: operator SSH, IP-allowlisted — credentials never live here
