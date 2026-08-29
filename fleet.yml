@@ -19,9 +19,12 @@ classes: []
 machines:
   - name: gbs-test
     kind: lxd
-    registry: 127.0.0.1:5000        # the shaper-registry container on this host
+    registry: 10.213.199.234:5000   # reachable FROM INSIDE a universe LXC, which is
+                                    # where builds run (Rule 11). A host-relative
+                                    # 127.0.0.1 names the LXC itself and the push dies.
     reach: operator SSH, IP-allowlisted — credentials never live here
   - name: gbs-p2
     kind: proxmox
-    registry: 127.0.0.1:5000        # gbs-p2 runs its own registry — one per machine
+    registry: <ask the operator>    # gbs-p2 runs its own registry — one per machine.
+                                    # Record the LXC-reachable address, never 127.0.0.1.
     reach: operator SSH, IP-allowlisted — credentials never live here
