@@ -6,7 +6,7 @@ base:
   tag: v1.13.2
 catalogue:
   repo: https://github.com/xavdp-pro/SHAPER-OS-BRICKS-V1.13
-  tag: v1.13.2
+  tag: v1.13.1
 # No class registered yet. Registration is a manual PR today (shaper new will
 # automate it — TARGET). To register the first class, DELETE the `classes: []`
 # line below and uncomment this block as-is:
