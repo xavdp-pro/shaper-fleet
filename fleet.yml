@@ -7,12 +7,15 @@ base:
 catalogue:
   repo: https://github.com/xavdp-pro/SHAPER-OS-BRICKS-V1.13
   tag: v1.13.0
+# No class registered yet. Registration is a manual PR today (shaper new will
+# automate it — TARGET). To register the first class, DELETE the `classes: []`
+# line below and uncomment this block as-is:
+# classes:
+#   - name: univ-<projet>-<classe>
+#     repo: https://github.com/xavdp-pro/univ-<projet>-<classe>
+#     tag: v1.0.0
+#     governedBy: self
 classes: []
-  # A class registers here at birth (shaper new opens the PR).
-  # - name: univ-<projet>-<classe>
-  #   repo: https://github.com/xavdp-pro/univ-<projet>-<classe>
-  #   tag: v1.0.0
-  #   governedBy: self
 machines:
   - name: gbs-test
     kind: lxd
