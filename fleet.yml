@@ -3,7 +3,7 @@
 # Repos and tags only — instances are ledger rows, buckets are derivable.
 base:
   repo: https://github.com/xavdp-pro/SHAPER-OS-V1.13
-  tag: v1.13.12
+  tag: v1.13.13
 catalogue:
   repo: https://github.com/xavdp-pro/SHAPER-OS-BRICKS-V1.13
   tag: v1.13.1
