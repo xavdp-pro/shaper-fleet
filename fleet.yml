@@ -7,15 +7,20 @@ base:
 catalogue:
   repo: https://github.com/xavdp-pro/SHAPER-OS-BRICKS-V1.13
   tag: v1.13.1
-# No class registered yet. Registration is a manual PR today (shaper new will
-# automate it — TARGET). To register the first class, DELETE the `classes: []`
-# line below and uncomment this block as-is:
-# classes:
-#   - name: univ-<projet>-<classe>
-#     repo: https://github.com/xavdp-pro/univ-<projet>-<classe>
-#     tag: v1.0.0
-#     governedBy: self
-classes: []
+# Registering a class is a manual PR today (shaper new will automate it —
+# TARGET). A class is a repo and a tag. An INSTANCE of a class is never listed
+# here: instances are rows in the ledger of whichever universe governs them.
+# `tag: unreleased` means the intent is written and the code is being built.
+classes:
+  # The demo fractal. Instances are ledger rows in univ-demo-saas, never repos.
+  - name: univ-demo-saas
+    repo: https://github.com/xavdp-pro/univ-demo-saas
+    tag: unreleased          # the intent is written; the code is being assembled
+    governedBy: self         # it is itself a governor
+  - name: univ-demo-crm
+    repo: https://github.com/xavdp-pro/univ-demo-crm
+    tag: unreleased
+    governedBy: univ-demo-saas
 machines:
   - name: gbs-test
     kind: lxd
