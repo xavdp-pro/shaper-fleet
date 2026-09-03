@@ -3,10 +3,10 @@
 # Repos and tags only — instances are ledger rows, buckets are derivable.
 base:
   repo: https://github.com/xavdp-pro/SHAPER-OS-V1.13
-  tag: v1.13.34
+  tag: v1.13.36
 catalogue:
   repo: https://github.com/xavdp-pro/SHAPER-OS-BRICKS-V1.13
-  tag: v1.13.1
+  tag: v1.13.36
 # Registering a class is a manual PR today (shaper new will automate it —
 # TARGET). A class is a repo and a tag. An INSTANCE of a class is never listed
 # here: instances are rows in the ledger of whichever universe governs them.
